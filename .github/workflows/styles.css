@@ -1,0 +1,196 @@
+/* page turner*/
+.logo{
+  padding: 5px;
+  border:4px ridge black; /* makes look like picture frame with ridge*/
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+
+}
+.dropdown-content{
+  display: none;
+  position:absolute;
+  background-color: white;
+  min-width:160px;
+  border: 1px solid black;
+  z-index: 1;
+  font-family: 'Treubchet MS';
+  font-size:20px;
+}
+.dropdown-content a{ 
+color: #db0032;
+padding:12px 16px;
+text-decoration:none;
+display: block;
+text-align: center;
+border-top: 2px dotted whitesmoke; /*to separarte with a light color */
+}
+.dropdown-context a:hover{ /*so all links have it a for all*/
+background-color: #002e6d;
+transition-property: background-color;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+border-top-width: 0px;
+
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+.dropdown:hover .logo{
+  background-color: #db0032;
+}
+
+
+
+
+.header1{
+  text-align: center; /* This is how to comment and this line does center align*/
+  font-family: cursive;
+  color: gray; /* can define colors also in rgb or hex*/
+  background-color: rgb(0,0,255); /*does blue, can also do hex with # and then the color number*/
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom:0px;
+
+}
+body{ /* makes all bodies light gray since not using id's*/
+  margin: 0px;/*to take away margins in color*/
+  background: lightgray;
+  
+}
+h2{
+  text-align: center;
+  font-family: cursive;
+  background-color: red;
+  color: gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0px;
+}
+.form {  /*creates new class with .---*/
+border:1px solid black;
+margin-left:5px;
+margin-right: 5px;
+padding:5px;
+font-family: cursive;
+font-size: 25px;
+}
+
+.names{
+  border:2px solid black;
+}
+.class{
+  border:2px solid gray;
+}
+#button{
+background-color: black;
+color:white;
+font-size:30px; 
+margin-top: 20px;
+margin-bottom:20px;
+transition-property: transform;
+transition-duration: 0.5s;
+transition-timing-function: ease-out;
+
+}
+
+#button:hover{/*change when hover over mouse*/
+  transform: scale3d(1.2,1.2,1.2);
+
+}
+#button:active{
+  background-color: white;
+  color: black;
+}
+.image1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Create an animation*/
+@keyframes slideinRight{
+  from{
+    transform:translateX(1000px) /*for x positive move to right and negative left can do for Y similarly as well*/
+
+  }
+  to{
+    transform: translateX(0px);
+
+  }
+
+}
+.slideinRight{
+  animation-name: slideinRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+/* to make name glow infinitely*/
+@keyframes pulsing {
+from{
+  box-shadow: 0px 0px 0px 0px gold; /* box shadow does the box and tex-shadow does the text*/
+}
+to{
+box-shadow: 0px 0px 10px 5px gold;
+}
+}
+.pulsing{
+  animation-name: pulsing;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulsingText {
+  from{
+    text-shadow: 0px 0px 0px gold; /* box shadow does the box and tex-shadow does the text*/
+  }
+  to{
+  text-shadow: 0px 0px 10px gold;
+  }
+}
+
+.pulsingText{
+  animation-name: pulsing;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.wrapper{
+  display:inline-block;
+  
+
+}
+.faded{
+  transition:opacity;
+  transition-duration: 0.5s;
+  opacity:1;
+
+}
+.faded:hover{
+  opacity:0.2;
+
+}
+@keyframes opacityPulse{
+  from{
+    opacity: 1;
+
+  }
+  to{
+    opacity: 0.2;
+
+  }
+}
+.OpacityPulse{
+  animation-name: opacityPulse;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
